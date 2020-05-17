@@ -10,25 +10,15 @@ import sys
 def compareTriplets(a, b):
     alice = 0
     bob = 0
-    if a[0] > b[0]:
-        alice += 1
-    elif a[0] < b[0]:
-        bob += 1
-    else:
-        pass
-    if a[1] < b[1]:
-        bob += 1
-    elif a[1] > b[1]:
-        alice += 1
-    else:
-        pass
-    if a[2] < b[2]:
-        bob += 1
-    elif a[2] > b[2]:
-        alice += 1
-    else:
-        pass
-    return [alice, bob];
+    for x in range(len(a)):
+        print(x)
+        if a[x] > b[x]:
+            alice += 1
+        elif a[x] < b[x]:
+            bob += 1
+        else:
+            pass
+    return [alice, bob]
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
